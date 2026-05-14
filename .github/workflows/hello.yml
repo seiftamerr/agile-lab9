@@ -1,6 +1,11 @@
 name: Hello Agile
+# Testing dev trigger
+on:
+  push:
+    branches: [ dev ]
 
-on: [push]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   say_hello:
@@ -9,3 +14,4 @@ jobs:
     steps:
       - name: Print Hello
         run: echo "Hello from GitHub Actions!"
+        
